@@ -1,0 +1,386 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+    --blue: rgb(197, 39, 57);
+    --white: rgb(234, 217, 186);
+  
+  }
+  
+  body {
+    padding: 25px;
+    background-color: rgb(205, 153, 153);
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  
+  
+  #navbar {
+  
+    background-color: #62c68c;
+    display: flex;
+    justify-content: space-between;
+    float: none;
+  }
+  
+  #sidebar>ul>li>a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
+  
+  #navbar a:hover {
+    background-color: #c37d7d;
+  }
+  
+  #myTopnav {
+    display: none;
+  }
+  
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.8fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "nav nav nav nav"
+        "sidebar about-me-pic about-me about-me"
+        "sidebar skills skills skills-image"
+        "sidebar education-image education education"
+        "sidebar project-header project-header project-header"
+        "sidebar p-box-1 p-box-2 p-box-3"
+        "sidebar experience-header experience-header experience-header"
+        "sidebar e-box-1 e-box-2 e-box-3"
+        "sidebar blogs-header blogs-header blogs-header"
+        "sidebar blog-image blog-text blog-text"
+        "important-links important-links important-links important-links"
+        "contact contact contact contact"
+    ;
+  }
+  
+  #navbar {
+    background-color: rgb(124, 124, 231);
+    grid-area: nav;
+  }
+  
+  #about-me {
+    grid-area: about-me;
+  }
+  
+  .about-me-pic {
+    grid-area: about-me-pic;
+  }
+  
+  .skills {
+    grid-area: skills;
+  }
+  
+  #skills-image {
+    grid-area: skills-image;
+  }
+  
+  .education {
+    grid-area: education;
+  }
+  
+  #education-image {
+    grid-area: education-image;
+  }
+  
+  #project-header {
+    grid-area: project-header;
+    text-align: center;
+  }
+  
+  .p-box-1 {
+    grid-area: p-box-1;
+  }
+  
+  .p-box-2 {
+    grid-area: p-box-2;
+  }
+  
+  .p-box-3 {
+    grid-area: p-box-3;
+  }
+  
+  .p-box-1,
+  .p-box-2,
+  .p-box-3,
+  .e-box-1,
+  .e-box-2,
+  .e-box-3 {
+    border: 2px solid rgb(194, 53, 53);
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #experience-header {
+    grid-area: experience-header;
+    text-align: center;
+  }
+  
+  .e-box-1 {
+    grid-area: e-box-1;
+  }
+  
+  .e-box-2 {
+    grid-area: e-box-2;
+  }
+  
+  .e-box-3 {
+    grid-area: e-box-3;
+  }
+  
+  .blogs-header {
+    grid-area: blogs-header;
+    text-align: center;
+  }
+  
+  .blog-image {
+    grid-area: blog-image;
+  }
+  
+  .blog-text {
+    grid-area: blog-text;
+  }
+  
+  #important-links {
+    grid-area: important-links;
+    text-align: center;
+  }
+  
+  
+  #contact {
+    grid-area: contact;
+    text-align: center;
+  }
+  
+  #sidebar {
+    grid-area: sidebar;
+    background-color: rgb(119, 119, 214);
+  }
+  
+  #sidebar a {
+    display: block;
+  }
+  
+  @media only screen and (max-width:800px) {
+    .container {
+        text-align: center;
+        grid-template-columns: 0.5fr;
+        grid-template-rows: 0.4fr 2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-gap: 0.2rem;
+        grid-template-areas:
+            "about-me-pic about-me-pic"
+            "about-me about-me"
+            "skills-image skills-image"
+            "skills skills"
+            "education-image education-image"
+            "education education"
+            "project-header project-header"
+            "p-box-1 p-box-1"
+            "p-box-2 p-box-2"
+            "p-box-3 p-box-3"
+            "experience-header experience-header"
+            "e-box-1 e-box-1"
+            "e-box-2 e-box-2"
+            "e-box-3 e-box-3"
+            "blogs-header blogs-header"
+            "blog-image blog-image"
+            "blog-text blog-text"
+            "important-links important-links"
+            "contact contact"
+        ;
+    }
+  
+    #sidebar {
+        display: none;
+    }
+  
+    #navbar {
+        display: none;
+    }
+  
+    #myTopnav {
+        display: block;
+    }
+  
+    :root {
+        --main-radius: 5px;
+        --main-padding: 5px;
+        --blue: blue;
+        --white: white;
+        --yellowish: #b7a24e;
+    }
+  
+    body {
+        padding: 25px;
+        background-color: rgb(167, 54, 92);
+    }
+  
+    li {
+        display: inline-block;
+        margin-right: 30px;
+    }
+  
+    #about-me {
+        grid-area: about-me;
+  
+    }
+  
+    .about-me-pic {
+        grid-area: about-me-pic;
+  
+    }
+  
+    .skills {
+        grid-area: skills;
+  
+    }
+  
+    #skills-image {
+        grid-area: skills-image;
+  
+    }
+  
+    .education {
+        grid-area: education;
+    }
+  
+    #education-image {
+        grid-area: education-image;
+    }
+  
+    #project-header {
+        grid-area: project-header;
+  
+    }
+  
+    .p-box-1 {
+        grid-area: p-box-1;
+    }
+  
+    .p-box-2 {
+        grid-area: p-box-2;
+    }
+  
+    .p-box-3 {
+        grid-area: p-box-3;
+    }
+  
+    .p-box-1,
+    .p-box-2,
+    .p-box-3,
+    .e-box-1,
+    .e-box-2,
+    .e-box-3 {
+        border: 2px solid rgb(164, 69, 69);
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+  
+    }
+  
+    #experience-header {
+        grid-area: experience-header;
+  
+    }
+  
+    .e-box-1 {
+        grid-area: e-box-1;
+    }
+  
+    .e-box-2 {
+        grid-area: e-box-2;
+    }
+  
+    .e-box-3 {
+        grid-area: e-box-3;
+    }
+  
+    .blogs-header {
+        grid-area: blogs-header;
+  
+    }
+  
+    .blog-image {
+        grid-area: blog-image;
+    }
+  
+    .blog-text {
+        grid-area: blog-text;
+    }
+  
+    #important-links {
+        grid-area: important-links;
+  
+    }
+  
+  
+    #contact {
+        grid-area: contact;
+  
+    }
+  
+    .topnav {
+        background-color: #bb2525;
+        overflow: hidden;
+    }
+  
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+  
+    .topnav a:hover {
+        background-color: #9389d4;
+        color: rgb(171, 61, 61);
+    }
+  
+  
+    .topnav a.active {
+        background-color: #893c3c;
+        color: white;
+    }
+  
+    .topnav .icon {
+        display: none;
+    }
+  
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+  
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+  
+    .topnav.responsive {
+        position: relative;
+    }
+  
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+  
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+  
+  }
